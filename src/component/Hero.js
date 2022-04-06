@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Description from "./Description";
 import Error from "./Error";
 import Geolocation from "./Location";
+import AccuracyToggle from "./AccuracyToggle";
 
 export default function Hero() {
 
     const [error, setError] = useState(false);
     const [getCoords, setGetCoords] = useState(false);
     const [coords, setCoords] = useState(false);
+    const [isAccurate, setIsAccurate] = useState(false);
   
     const handleGeolocation = (geodata) => {
       setGetCoords(false);
@@ -17,16 +19,17 @@ export default function Hero() {
       if (geodata.error) {
         setError(geodata.error.message);
       } else {
-        if (error) {
-          setError(false);
-        }
+        setError(false);
         setCoords(`${geodata.latitude}, ${geodata.longitude}`);
-        }
+      }
     }
   
     const handleClick = () => {
       setGetCoords(true);
     }   
+    const handleToggle = () => {
+      setIsAccurate(!isAccurate);
+    }
 
     return (
         <>
@@ -41,10 +44,11 @@ export default function Hero() {
                   Get Location
                 </button>
                 {error && <Error error={error} setError={setError} />}
+                <AccuracyToggle handleToggle={handleToggle} />
               </div>
             </div>
           </div>
-          {getCoords && <Geolocation handleGeolocation={handleGeolocation}/>}
+          {getCoords && <Geolocation handleGeolocation={handleGeolocation} options={ { enableHighAccuracy: isAccurate } } />}
         </>
     )
 }

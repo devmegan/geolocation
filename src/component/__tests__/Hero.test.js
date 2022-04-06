@@ -91,5 +91,18 @@ describe('hero', () => {
     userEvent.click(locationBtn);
 
     expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+    expect(screen.queryByText('User denied Geolocation')).not.toBeInTheDocument();
+  });
+
+  it('handles accuracy toggle change', () => {
+    expect.hasAssertions();
+
+    render(<Hero />);
+
+    const toggle = screen.getByLabelText('High accuracy')
+
+    userEvent.click(toggle);
+
+    expect(toggle).toBeChecked();
   });
 });
