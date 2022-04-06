@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#dev 
+.gitpod.yml
+
 # testing
 /coverage
 
