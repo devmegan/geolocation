@@ -16,7 +16,7 @@ Object {
           >
             <a
               class="btn btn-ghost normal-case text-xl"
-              href="/"
+              href="https://devmegan.github.io/geolocation"
             >
               useGeolocation
             </a>
@@ -97,7 +97,7 @@ Object {
         >
           <a
             class="btn btn-ghost normal-case text-xl"
-            href="/"
+            href="https://devmegan.github.io/geolocation"
           >
             useGeolocation
           </a>
