@@ -62,6 +62,23 @@ Object {
               >
                 Get Location
               </button>
+              <div
+                class="w-1/2 mx-auto mt-4"
+              >
+                <label
+                  class="label cursor-pointer"
+                >
+                  <span
+                    class="label-text"
+                  >
+                    High accuracy
+                  </span>
+                  <input
+                    class="toggle toggle-primary"
+                    type="checkbox"
+                  />
+                </label>
+              </div>
             </div>
           </div>
         </div>
@@ -126,6 +143,23 @@ Object {
             >
               Get Location
             </button>
+            <div
+              class="w-1/2 mx-auto mt-4"
+            >
+              <label
+                class="label cursor-pointer"
+              >
+                <span
+                  class="label-text"
+                >
+                  High accuracy
+                </span>
+                <input
+                  class="toggle toggle-primary"
+                  type="checkbox"
+                />
+              </label>
+            </div>
           </div>
         </div>
       </div>
