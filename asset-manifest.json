@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/geolocation/static/css/main.f3f4d241.css",
+    "main.js": "/geolocation/static/js/main.cfdbdf45.js",
+    "index.html": "/geolocation/index.html",
+    "main.f3f4d241.css.map": "/geolocation/static/css/main.f3f4d241.css.map",
+    "main.cfdbdf45.js.map": "/geolocation/static/js/main.cfdbdf45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f3f4d241.css",
+    "static/js/main.cfdbdf45.js"
+  ]
+}
